@@ -1,0 +1,22 @@
+.bg-pink{
+    background-color: rgb(255, 192, 203);
+}
+.bg-pink a:hover{
+    color: pink;
+}
+.bg-rounded{
+    border-radius: 45px;
+    background-color: white;
+}
+.bg-rounded:hover{
+    background-color: rgb(241, 107, 129);
+    color: white;
+}
+.navbar-light a:hover{
+    background-color:rgb(241, 107, 129);
+    border-radius: 45px;
+
+}
+a{
+    margin: 0px 10px 0px 10px;
+}
