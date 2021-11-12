@@ -1,0 +1,16 @@
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.imagen{
+    width: 25%;
+    height: 25%;
+    border-radius: 50px;
+    margin-bottom: .8em;
+}
+.size{
+    color: rgb(241, 107, 129);
+    font-weight: bold;
+    font-size: .9em;
+}

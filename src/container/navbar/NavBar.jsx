@@ -1,7 +1,11 @@
 import React from 'react'
-import navbar from './navbar.css'
+import './navbar.css'
+import CardWidget from '../../components/carditem/CardWidget.jsx'
 
 const NavBar = () => {
+  const cart = () => {
+    console.log('hola funciona')
+}
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-pink">
       <a className="navbar-brand" href="#"><img src="../../logo192.png" width="50px"></img></a>
@@ -26,6 +30,8 @@ const NavBar = () => {
             <a className="nav-link bg-rounded px-4" href="#">Login</a>
           </li>
         </ul>
+        <CardWidget callShow={cart}/>
+      
       </div>
     </nav>
   )

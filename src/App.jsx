@@ -1,12 +1,13 @@
 
 import './App.css';
-import NavBar from './components/navbar/NavBar.jsx'
+import NavBar from './container/navbar/NavBar.jsx'
+import ItemListContainer from './container/ItemListContainer/ItemListContainer.jsx'
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <h2>Header</h2>
+      <ItemListContainer greeting="Conoce más de mis productos para llevar la moda en Salud!"/>
     </div>
   );
 }
