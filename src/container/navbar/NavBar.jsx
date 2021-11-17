@@ -11,26 +11,26 @@ const NavBar = () => {
   } 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-pink">
-      <a className="navbar-brand" href="#"><img src="../../logo192.png" width="50px"></img></a>
+      <a className="navbar-brand" href="/"><img src="../../logo192.png" width="50px" alt="logo"></img></a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse my-2" id="navbarNav">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item active">
-            <a className="nav-link bg-rounded px-4" href="#">Inicio <span class="sr-only">(current)</span></a>
+            <a className="nav-link bg-rounded px-4" href="/">Inicio <span class="sr-only">(current)</span></a>
           </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Nosotros</a>
+              <a className="nav-link" href="/">Nosotros</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Productos</a>
+              <a className="nav-link" href="/">Productos</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contacto</a>
+              <a className="nav-link" href="/">Contacto</a>
             </li>
           <li className="nav-item">
-            <a className="nav-link bg-rounded px-4" href="#">Login</a>
+            <a className="nav-link bg-rounded px-4" href="/">Login</a>
           </li>
         </ul>
         <CardWidget callShow={cart}/>

@@ -4,8 +4,6 @@
     flex-direction: column;
 }
 .imagen{
-    width: 25%;
-    height: 25%;
     border-radius: 20px;
     margin-bottom: .8em;
 }
