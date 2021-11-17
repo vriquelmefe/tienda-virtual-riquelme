@@ -16,9 +16,9 @@ const NavBar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse my-2" id="navbarNav">
-        <ul className="navbar-nav mx-auto">
-          <li className="nav-item active">
-            <a className="nav-link bg-rounded px-4" href="/">Inicio <span class="sr-only">(current)</span></a>
+        <ul className="navbar-nav ml-auto middle">
+          <li className="nav-item">
+            <a className="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
           </li>
             <li className="nav-item">
               <a className="nav-link" href="/">Nosotros</a>
@@ -29,11 +29,11 @@ const NavBar = () => {
             <li className="nav-item">
               <a className="nav-link" href="/">Contacto</a>
             </li>
-          <li className="nav-item">
-            <a className="nav-link bg-rounded px-4" href="/">Login</a>
+          <li className="nav-item mr-2">
+            <a className="nav-link bg-rounded px-3" href="/">Login</a>
           </li>
+          <CardWidget callShow={cart}/>
         </ul>
-        <CardWidget callShow={cart}/>
       
       </div>
     </nav>
