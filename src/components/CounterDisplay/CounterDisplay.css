@@ -1,0 +1,9 @@
+.button-sumar, .button-restar{
+    border-radius: 50%;
+    border: 2px solid rgb(241, 107, 129);
+    width: 2em;
+    margin: 5px;
+}
+.contador{
+    margin: 1.5em 1.5em;
+}

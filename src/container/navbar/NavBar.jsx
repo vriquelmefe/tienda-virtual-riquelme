@@ -1,11 +1,14 @@
 import React from 'react'
 import './navbar.css'
-import CardWidget from '../../components/carditem/CardWidget.jsx'
+import CardWidget from '../../components/Cardwidget/CardWidget.jsx'
+import Swal from 'sweetalert2'
+
 
 const NavBar = () => {
   const cart = () => {
     console.log('hola funciona')
-}
+    Swal.fire('Click carrito funciona')
+  } 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-pink">
       <a className="navbar-brand" href="#"><img src="../../logo192.png" width="50px"></img></a>
