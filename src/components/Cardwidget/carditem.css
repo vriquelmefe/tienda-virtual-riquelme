@@ -1,8 +1,5 @@
-.button-cart{
+.icon-cart{
     cursor: pointer;
-    height: 3rem;
-}
-.button-cart:hover{
-    width: 3rem;
-    box-shadow: 2px 2px 2px rgb(0,0,0 ,0.1);
+    vertical-align: middle;
+    color: rgb(241, 107, 129);
 }

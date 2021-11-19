@@ -1,15 +1,13 @@
 .titulo-greeting{
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
-    font-style: italic;
     font-family: 'Poppins', sans-serif;
 }
 .container{
     justify-content: center;
 }
 .card{
-    border: .5px solid rgba(241, 107, 129, 0.581);
-    box-shadow: 0 7px 10px rgb(0,0,0,0.5);
+    box-shadow: 0 5px 10px rgb(0,0,0,0.5);
     max-width: 18rem;
 }
 .card-body{
