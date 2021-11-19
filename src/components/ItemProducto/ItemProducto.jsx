@@ -1,7 +1,11 @@
 import React from 'react'
 import CounterDisplay from '../CounterDisplay/CounterDisplay'
+import Swal from 'sweetalert2'
 
 const ItemProducto = ({ name, price, imagen, size, stock,description }) => {
+  const detalle = () => {
+    Swal.fire('Aun no esta habilitada la descripción, intente en un par de clases mas adelante 😅')
+  }
   return (
     <div className="mx-4">
 
@@ -26,6 +30,8 @@ const ItemProducto = ({ name, price, imagen, size, stock,description }) => {
         <div className="card-body">
           <h6>Stock disponible: {stock}</h6>
         </div>
+
+        <button onClick={detalle}>Ver más detalle</button>
 
         <CounterDisplay initial={1} stock={stock} />
       </li>
