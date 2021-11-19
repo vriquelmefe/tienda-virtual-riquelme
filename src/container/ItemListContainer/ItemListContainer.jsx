@@ -11,7 +11,7 @@ const ItemListContainer = ({ greeting }) => {
 
   const todosLosProductos = [
     { name: 'Camisa', imagen: camisa, size: 'S', price: 10000, stock: 5 },
-    { name: 'Timbres', imagen: timbre, size: 'M', price: 5000, stock: 10 },
+    { name: 'Timbres', imagen: timbre, size: 'M', price: 5000, stock: 20 },
     { name: 'Tarjetero', imagen: tarjetero, size: 'Simple', price: 2000, stock: 10 }
   ]
   const promise = new Promise((resolve, reject) => {

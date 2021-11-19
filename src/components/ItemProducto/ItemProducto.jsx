@@ -16,6 +16,9 @@ const ItemProducto = ({ name, price, imagen, size, stock }) => {
         <h6 className=" mb-2 text-muted ">Talla: <span className="size">{size}</span></h6>
 
         <h6 class="card-subtitle mb-2">Precio: <span className="font-weight-bold size">{price}</span></h6>
+        <div className="card-body">
+          <h6>Stock disponible: {stock}</h6>
+        </div>
 
         <CounterDisplay initial={1} stock={stock} />
       </li>
