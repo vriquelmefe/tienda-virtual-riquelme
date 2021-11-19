@@ -9,7 +9,7 @@ const ItemList = ({ listproducto }) => {
     <ul className="d-flex">
       {
       listproducto.map(producto => 
-        <ItemProducto name={producto.name} price={producto.price} imagen={producto.imagen} stock={producto.stock} size={producto.size} key={producto.name}/>
+        <ItemProducto name={producto.name} price={producto.price} imagen={producto.imagen} stock={producto.stock} size={producto.size}  description={producto.description} key={producto.name}/>
       )
       }
     </ul>
