@@ -6,27 +6,30 @@ const ItemDetailContainer = ({ todosLosProductosLista }) => {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(false);
 
-  const getItem = new Promise((resolve, reject) => {
-    
-    setTimeout(() =>
-    resolve(todosLosProductosLista[0]), 2000)
-  });
-  
+  const getItem = (id) => {
+
+    return new Promise((resolve, reject) => {
+
+      setTimeout(() =>
+        resolve(todosLosProductosLista.find(item => item.id === id)), 2000)
+    });
+  }
+
   useEffect(() => {
     setLoading(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    getItem
-    .then(data => setItems(data))
-    .catch(err => err)
-    .finally(()=>{
-      setLoading(false)
-  })
+    getItem(2)
+      .then(data => setItems(data))
+      .catch(err => err)
+      .finally(() => {
+        setLoading(false)
+      })
     // setLoading(false)
-    
+
   }, [])
 
   if (loading) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   return (
