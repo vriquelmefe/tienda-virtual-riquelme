@@ -6,7 +6,7 @@ const ItemDetailContainer = ({ todosLosProductosLista }) => {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(false);
 
-  const promesa = new Promise((resolve, reject) => {
+  const getItem = new Promise((resolve, reject) => {
     
     setTimeout(() =>
     resolve(todosLosProductosLista[0]), 2000)
@@ -15,7 +15,7 @@ const ItemDetailContainer = ({ todosLosProductosLista }) => {
   useEffect(() => {
     setLoading(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    promesa
+    getItem
     .then(data => setItems(data))
     .catch(err => err)
     .finally(()=>{
