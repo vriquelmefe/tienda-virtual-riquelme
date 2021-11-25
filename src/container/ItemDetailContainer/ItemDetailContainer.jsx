@@ -9,21 +9,24 @@ const ItemDetailContainer = ({ todosLosProductosLista }) => {
   const promesa = new Promise((resolve, reject) => {
     
     setTimeout(() =>
-    // setLoading(true),
     resolve(todosLosProductosLista[0]), 2000)
   });
   
   useEffect(() => {
+    setLoading(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     promesa
     .then(data => setItems(data))
     .catch(err => err)
+    .finally(()=>{
+      setLoading(false)
+  })
     // setLoading(false)
     
   }, [])
 
   if (loading) {
-    return <Loading />;
+    return <Loading/>;
   }
 
   return (
