@@ -1,8 +1,4 @@
-.list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
+
 .imagen{
     border-radius: 0px 20px;
     margin-bottom: .8em;

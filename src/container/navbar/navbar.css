@@ -20,3 +20,9 @@
 a{
     margin: 0px 10px 0px 10px;
 }
+.imagen-logo{
+    border-radius: 15%;
+}
+.imagen-logo a:hover{
+    background: none;
+}

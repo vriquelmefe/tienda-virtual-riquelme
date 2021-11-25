@@ -6,13 +6,15 @@ import ItemProducto from '../ItemProducto/ItemProducto'
 
 const ItemList = ({ listproducto }) => {
   return (
-    <ul className="d-flex">
+    
+    <div className="row d-flex justify-content-between">
       {
       listproducto.map(producto => 
-        <ItemProducto name={producto.name} price={producto.price} imagen={producto.imagen} stock={producto.stock} size={producto.size}  description={producto.description} key={producto.name}/>
+        <ItemProducto  id={producto.id } name={producto.name} price={producto.price} imagen={producto.imagen} stock={producto.stock} size={producto.size}  description={producto.description} key={producto.name}/>
       )
       }
-    </ul>
+
+    </div>
 
   )
 }

@@ -19,7 +19,7 @@ const CounterDisplay = ({ stock, initial }) => {
     Swal.fire('Click agregar al carrito funciona')
   }
   return (
-    <div className="border-counter ">
+    <div className="border-counter mx-auto">
       <button className="button-restar" onClick={onDecrement} disabled={counter === 1}>-</button>
       <span className="contador">{counter}</span>
       <button className="button-sumar" onClick={onIncrement} disabled={counter === stock}>+</button>

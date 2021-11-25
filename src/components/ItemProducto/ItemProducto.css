@@ -1,0 +1,12 @@
+.list {
+    list-style: none;
+}
+.boton-detalle{
+    border-radius: 4px;
+    height: 2em;
+    margin-bottom: 5px;
+    color: rgb(163, 106, 115);
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid pink;
+}
