@@ -1,6 +1,6 @@
-import camisa from './assets/img/camisa.jpeg'
-import tarjetero from './assets/img/tarjetero.jpeg'
-import timbre from './assets/img/timbre.jpeg'
+import camisa from '../assets/img/camisa.jpeg'
+import tarjetero from '../assets/img/tarjetero.jpeg'
+import timbre from '../assets/img/timbre.jpeg'
 
 const todosLosProductos = [
     { id: 1, name: 'Camisa', imagen: camisa, size: 'S', price: 10000, stock: 5 , description: 'Suave polera, con telas antitranspirante'},

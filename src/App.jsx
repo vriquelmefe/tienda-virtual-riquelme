@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './container/navbar/NavBar.jsx'
 // import ItemListContainer from './container/ItemListContainer/ItemListContainer.jsx'
 import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer';
- import todosLosProductos from'./productos';
+ import todosLosProductos from './store/productos';
 
 
 
