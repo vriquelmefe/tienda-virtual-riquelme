@@ -3,6 +3,7 @@ import './navbar.css'
 import CardWidget from '../../components/Cardwidget/CardWidget.jsx'
 import Logo from '../../assets/img/logo.png'
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -19,14 +20,20 @@ const NavBar = () => {
       <div className="collapse navbar-collapse my-2" id="navbarNav">
         <ul className="navbar-nav ml-auto middle">
           <li className="nav-item">
-            <a className="nav-link" href="/">Inicio <span className="sr-only">(current)</span></a>
+            <Link className="nav-link" to="/">Inicio <span className="sr-only">(current)</span></Link>
           </li>
+          <ul>
             <li className="nav-item">
-              <a className="nav-link" href="/">Nosotros</a>
+            <Link className="nav-link" to="/category/ropa">Ropa</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">Productos</a>
+              <Link className="nav-link" to='/category/manualidades'>Manualidades</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to='/category/accesorios'>Accesorios</Link>
+            </li>
+
+          </ul>
             <li className="nav-item">
               <a className="nav-link" href="/">Contacto</a>
             </li>
