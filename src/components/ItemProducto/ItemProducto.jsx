@@ -1,25 +1,27 @@
 import React from 'react'
 import './ItemProducto.css'
-import { useHistory } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
-const ItemProducto = ({ id, name, imagen, category, description }) => {
-  const history =useHistory()
+const ItemProducto = ({ producto }) => {
+  console.log(producto.category);
   return (
-    <div className="col-lg-5 col-md-6 col-sm-12">
-      <div className="card mb-4 p-3">
+    <div className="col-lg-3 col-md-5 col-sm-12 mx-2 border-card">
+      <div className="card-deck mb-4" key={producto.id}>
+        <div className="card m-0">
+            <img
+              src={producto.imagen}
+              className="imagen img-fluid"
+              alt="Camisa" />
+          <div className="card-body">
+            <h3>{producto.name}</h3>
+            <div>
 
-        <div>
-          <img
-            src={imagen}
-            className="imagen card-img-top"
-            alt="Camisa" />
-          <h3>{name}</h3>
-          <p><b>Descripción:</b> {description}</p>
+            <p><b>Descripción:</b> {producto.description}</p>
+            </div>
+            <NavLink className="boton-detalle" to={`/item/${producto.id}`}>Ver más detalle</NavLink>
+
+          </div>
         </div>
-        <hr></hr>
-        <button className="boton-detalle" onClick={() =>history.push(`/category/${category}/${id}`)}>Ver más detalle</button>
-       
-
       </div>
     </div>
   )

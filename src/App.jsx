@@ -2,8 +2,10 @@
 import NavBar from './container/navbar/NavBar.jsx'
 import ItemListContainer from './container/ItemListContainer/ItemListContainer.jsx'
 import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer';
+import Contacto from './components/Contacto/Contacto'
+import Login from './components/Login/Login'
 import PageNotFound from './components/PageNotFound/PageNotFound'
- import {
+import {
   BrowserRouter as Router,
   Switch,
   Route
@@ -23,16 +25,9 @@ function App() {
       <ItemListContainer greeting="Conoce más de mis productos para llevar la moda en Salud!"/>
 
       </Route>
-      <Route path="/category/:prodId">
-      <ItemDetailContainer />
-
-      </Route>
-      <Route path="/contacto">
-
-      </Route>
-      <Route exact path="/login">
-
-      </Route>
+      <Route exact path="/item/:prodId" component={ItemDetailContainer}/>
+      <Route path="/contacto" component={Contacto} />
+      <Route exact path="/login" component={Login} />
       <Route path="*">
         <PageNotFound />
       </Route>

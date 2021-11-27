@@ -7,10 +7,10 @@ import ItemProducto from '../ItemProducto/ItemProducto'
 const ItemList = ({ listproducto }) => {
   return (
     
-    <div className="row d-flex justify-content-between">
+    <div className="row d-flex justify-content-around align-content-stretch flex-wrap">
       {
       listproducto.map(producto => 
-        <ItemProducto  key={producto.id} {...producto}/>
+        <ItemProducto key={producto.id} producto={producto}/>
       )
       }
 

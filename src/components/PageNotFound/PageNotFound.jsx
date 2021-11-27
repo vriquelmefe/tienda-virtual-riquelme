@@ -1,9 +1,10 @@
 import React from 'react'
+import notFound from  '../../assets/img/notFound.gif'
 
 const PageNotFound = () => {
     return (
-        <div>
-            Pagina no habilitada
+        <div className="container text-center">
+            <img src={notFound} alt="Pagina no encontrada" />
         </div>
     )
 }

@@ -1,32 +1,33 @@
 import React from 'react'
 import CounterDisplay from '../CounterDisplay/CounterDisplay'
 
-const ItemDetail = ({id, name, imagen, description, price, size, stock}) => {
-    return (
-      <div className="col-12 col-lg-4 mt-4">
-        <div className="card mb-4 p-3"  key={id}>
-        <div>
-          <img
-            src={imagen}
-            className="imagen card-img-top"
-            alt="Camisa" />
+const ItemDetail = ({ item }) => {
+  return (
+    <div className="col-12 col-lg-8 col-xl-10">
+    <div className="card mb-3 mt-4" key={item.id}>
+      <div className="row no-gutters">
+        <div className="col-md-4">
+          <img src={item.imagen} alt={item.name}  className="card-img-top"/>
         </div>
-        <hr></hr>
-        <div className="card-body text-center">
-          <h5 className="card-title">{name}</h5>
-          <p><b>Descripción:</b> {description}</p>
-          <h6 className=" mb-2 text-muted ">Talla: <span className="size">{size}</span></h6>
-          <h6 className="card-subtitle mb-2">Precio: <span className="font-weight-bold size">{price}</span></h6>
-          <hr></hr>
+        <div className="col-md-8">
+          <div className="card-body">
+            <h5 className="card-title">{item.name}</h5>
+            <p className="card-text">{item.description}</p>
+            <h6 className=" mb-2 text-muted ">Talla: <span className="size">{item.size}</span></h6>
+            <h6 className="card-subtitle mb-2">Precio: <span className="font-weight-bold size">{item.price}</span></h6>
+            <hr></hr>
 
-          <CounterDisplay initial={1} stock={stock} />
-          <h6 className="mt-2">Stock disponible: {stock}</h6>
+            <CounterDisplay initial={1} stock={item.stock} />
+            <h6 className="mt-2">Stock disponible: {item.stock}</h6>
+          </div>
         </div>
-
       </div>
+    </div>
 
-      </div>
-    )
+    </div>
+
+
+  )
 }
 
 export default ItemDetail

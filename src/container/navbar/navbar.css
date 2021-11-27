@@ -8,9 +8,10 @@
     border-radius: 45px;
     background-color: white;
 }
-.bg-rounded:hover{
+a.bg-rounded:hover{
     background-color: rgb(241, 107, 129);
     color: white;
+    width: 20%;
 }
 .navbar-light a:hover{
     background-color:rgb(241, 107, 129);
@@ -25,4 +26,17 @@ a{
 }
 .imagen-logo a:hover{
     background: none;
+}
+.dropdown-item{
+    width: 80%;
+}
+a.dropdown-item.active{
+    background: none;
+    color: white;
+    background-color:rgb(241, 107, 129);
+    border-radius: 15px;
+}
+.bg-rounded-login{
+    background-color: white;
+    border-radius: 20px;
 }
