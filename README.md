@@ -2,6 +2,7 @@
 
 ###  **Bienvenidos a mi tienda virtual** , en ella podrás simular la compra de un producto, pudiendo agregar y descontar cantidades de un producto, emitiendo mensaje de alerta cuando la cantidad supera el stock, navegar entre las distintas categorías y más adelante podrás logrearte para que tu compra sea aun más personalizada.
 
+## *A continuación te dejo una imagen de como debería verse el proyecto una vez instalado exitosamente :)*
 <br>
     <img src="https://raw.githubusercontent.com/vriquelmefe/virtual-store-riquelme/main/src/assets/img/home-virtual-store.png" />
 <br>
