@@ -16,9 +16,8 @@ const ItemDetail = ({ item }) => {
             <h6 className=" mb-2 text-muted ">Talla: <span className="size">{item.size}</span></h6>
             <h6 className="card-subtitle mb-2">Precio: <span className="font-weight-bold size">{item.price}</span></h6>
             <hr></hr>
-
             <CounterDisplay initial={1} stock={item.stock} />
-            <h6 className="mt-2">Stock disponible: {item.stock}</h6>
+            <h6 className="mt-3">Stock disponible: {item.stock}</h6>
           </div>
         </div>
       </div>

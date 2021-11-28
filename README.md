@@ -1,23 +1,28 @@
-# Getting Started with Create React App
+# Virtual Store Riquelme
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###  **Bienvenidos a mi tienda virtual** , en ella podrás simular la compra de un producto, pudiendo agregar y descontar cantidades de un producto, emitiendo mensaje de alerta cuando la cantidad supera el stock, navegar entre las distintas categorías y más adelante podrás logrearte para que tu compra sea aun más personalizada.
 
-## Available Scripts
+<br>
+    <img src="https://raw.githubusercontent.com/vriquelmefe/virtual-store-riquelme/main/src/assets/img/home-virtual-store.png" />
+<br>
 
-In the project directory, you can run:
+# Proyecto creado con Create React App
+## Uso de Bootstrap y css para mejorar la parte visual.
+## Uso se SweetAlert2 para las alertas emitidas en caso de uso.
+
+### Antes de que continues debo **agradecer por haberte interesado en probar mi app, espero que te guste. =) !!! **
+
+## Para poder comenzar a usarlo debes clonar el repo en tu directorio favorito o descargar el zip.
+
+## Luego de haber descargado el proyecto deberas ejecutar los siguientes comando
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Abrira un proyecto en [http://localhost:3000]
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para realizar pruebas al proyecto [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
 ### `npm run build`
 

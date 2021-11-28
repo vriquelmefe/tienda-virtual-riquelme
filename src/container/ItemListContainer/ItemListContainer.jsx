@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Loading from '../../components/Loading/Loading'
 import ItemList from '../../components/ItemList/ItemList.jsx'
+import Loading from '../../components/Loading/Loading'
 import './ItemListContainer.css'
 import { pedirDatos } from '../../services/pedirDatos'
 import { useParams } from 'react-router'
@@ -25,14 +25,15 @@ const ItemListContainer = ({ greeting }) => {
     .finally(() => setLoading(false))
   }, [catId])
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return ;
+  // }
   return (
     <div className="container">
-      <h2 className="titulo-greeting my-4 e">{greeting}</h2>
-      
-      <ItemList className="container-fluid" listproducto={productos} />
+      <h2 className="titulo-greeting my-4 text-center">{greeting}</h2>
+      {
+        loading ? <Loading /> : <ItemList className="container-fluid" listproducto={productos} />
+      }  
     </div>
   )
 }

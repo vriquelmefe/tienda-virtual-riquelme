@@ -19,10 +19,10 @@ function App() {
       <NavBar />
     <Switch>
       <Route exact path="/">
-      <ItemListContainer greeting="Conoce más de mis productos para llevar la moda en Salud!"/>
+      <ItemListContainer greeting="Conoce más de la moda en Salud!!!"/>
       </Route>
       <Route path="/category/:catId">
-      <ItemListContainer greeting="Conoce más de mis productos para llevar la moda en Salud!"/>
+      <ItemListContainer greeting="Todos los productos que puedas imaginar!!!"/>
 
       </Route>
       <Route exact path="/item/:prodId" component={ItemDetailContainer}/>

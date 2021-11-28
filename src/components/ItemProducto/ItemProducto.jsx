@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 const ItemProducto = ({ producto }) => {
   console.log(producto.category);
   return (
-    <div className="col-lg-3 col-md-5 col-sm-12 mx-2 border-card">
-      <div className="card-deck mb-4" key={producto.id}>
-        <div className="card m-0">
+    <div className="col-lg-3 col-md-5 col-sm-12 mx-2 ">
+      <div className="card-deck border-card mb-4" key={producto.id}>
+        <div className="card border-card m-0">
             <img
               src={producto.imagen}
               className="imagen img-fluid"
@@ -18,7 +18,7 @@ const ItemProducto = ({ producto }) => {
 
             <p><b>Descripción:</b> {producto.description}</p>
             </div>
-            <NavLink className="boton-detalle" to={`/item/${producto.id}`}>Ver más detalle</NavLink>
+            <NavLink className="boton-detalle d-block" to={`/item/${producto.id}`}>Ver más detalle</NavLink>
 
           </div>
         </div>
