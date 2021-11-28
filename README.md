@@ -9,17 +9,19 @@
 
 # Proyecto creado con Create React App
 ## Uso de Bootstrap y css para mejorar la parte visual.
-## Uso se SweetAlert2 para las alertas emitidas en caso de uso.
+## Uso de SweetAlert2 para las alertas emitidas en caso de uso.
 
 ### Antes de que continues debo **agradecer por haberte interesado en probar mi app, espero que te guste. =) !!! **
 
-## Para poder comenzar a usarlo debes clonar el repo en tu directorio favorito o descargar el zip.
+## Para poder comenzar a usarlo debes clonar el repositorio en tu directorio favorito o descargar el zip.
 
-## Luego de haber descargado el proyecto deberas ejecutar los siguientes comando
+## Luego de haber descargado el proyecto deberás ejecutar el  siguiente comando para poder correr la app
 
 ### `npm start`
 
 Abrira un proyecto en [http://localhost:3000]
+
+## Estos comandos son paraprueba de test, deployar aplicacion y más
 
 ### `npm test`
 
