@@ -2,10 +2,12 @@
     list-style: none;
 }
 .border-card{
-    border-radius: 30px;
+    border-radius: 15px;
+}
+.card{
+    box-shadow: 4px 8px 15px rgb(0,0,0, 0.3);
 }
 .boton-detalle{
-    border-radius: 20px;
     height: 2em;
     margin-bottom: 5px;
     color: rgb(163, 106, 115);
@@ -25,9 +27,7 @@ a.boton-detalle:hover{
     border: none;
     padding: auto;
 }
-.card-deck{
-    box-shadow: 4px 8px 15px rgb(0,0,0, 0.2);
-}
-.imagen{
+.imagen-producto{
     height: 200px;
+    border-radius: 15px 15px 0px 0px;
 }

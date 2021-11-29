@@ -5,22 +5,19 @@ import { NavLink } from 'react-router-dom';
 const ItemProducto = ({ producto }) => {
   console.log(producto.category);
   return (
-    <div className="col-lg-3 col-md-5 col-sm-12 mx-2 ">
-      <div className="card-deck border-card mb-4" key={producto.id}>
-        <div className="card border-card m-0">
-            <img
-              src={producto.imagen}
-              className="imagen img-fluid"
-              alt="Camisa" />
-          <div className="card-body">
-            <h3>{producto.name}</h3>
-            <div>
-
-            <p><b>Descripción:</b> {producto.description}</p>
-            </div>
-            <NavLink className="boton-detalle d-block" to={`/item/${producto.id}`}>Ver más detalle</NavLink>
-
-          </div>
+    <div className="col-12 col-md-6 col-lg-4">
+      <div className="card border-card mb-4 text-left" key={producto.id}>
+          <img className="imagen-producto img-fluid" src={producto.imagen} alt={producto.name} />
+        <div className="card-body">
+          <h5 className="card-title mt-3">{producto.name}</h5>
+          <p className="card-text mb-2"><b>Precio:</b> ${producto.price.toLocaleString()}</p>
+          <p className="card-text mb-2 text-truncate"><b>Descripción:</b> {producto.description} </p>
+          <NavLink 
+            className="boton-detalle d-block rounded-pill mt-3" 
+            to={`/item/${producto.id}`}
+          >
+            Ver más detalle
+          </NavLink> 
         </div>
       </div>
     </div>

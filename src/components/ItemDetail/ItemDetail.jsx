@@ -1,13 +1,14 @@
 import React from 'react'
 import CounterDisplay from '../CounterDisplay/CounterDisplay'
+import './ItemDetail.css'
 
 const ItemDetail = ({ item }) => {
   return (
-    <div className="col-12 col-lg-8 col-xl-10">
-    <div className="card mb-3 mt-4" key={item.id}>
+    <div className="col-12 col-lg-8 col-xl-10 mx-auto">
+    <div className="card  mb-3 mt-4" key={item.id}>
       <div className="row no-gutters">
         <div className="col-md-4">
-          <img src={item.imagen} alt={item.name}  className="card-img-top"/>
+          <img src={item.imagen} alt={item.name}  className="h-100 img-detail"/>
         </div>
         <div className="col-md-8">
           <div className="card-body">
