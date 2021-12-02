@@ -5,7 +5,7 @@ import Button from '../Button/Button'
 import Swal from 'sweetalert2'
 
 
-const CounterDisplay = ({ stock, initial }) => {
+const CounterDisplay = ({ stock, initial ,onAdd}) => {
   const [counter, setCounter] = useState(initial);
 
 
@@ -16,25 +16,21 @@ const CounterDisplay = ({ stock, initial }) => {
       Swal.fire('Sobrepasa el stock disponible')
     }
   }
-  const onDecrement = (initial) => {
-    if(counter > 1){
+  const onDecrement = () => {
+    if(counter > initial){
       setCounter(counter - 1)
     }else {
       Swal.fire('No puede ser menos de 1')
     }
   }
-  const onAdd = () => {
-    Swal.fire('Click agregar al carrito funciona')
-  }
-  // disabled={counter === 1}
-  // disabled={counter === stock}
+  
   return (
     <div className="border-counter mx-auto">
       <button className="button-restar" onClick={ () => onDecrement() } >-</button>
       <span className="contador">{counter}</span>
       <button className="button-sumar" onClick={ () => onIncrement() } >+</button>
       <div>
-      <Button callShow={onAdd}>
+      <Button callShow={() => onAdd(counter)}>
         Agregar al carro
       </Button>
 

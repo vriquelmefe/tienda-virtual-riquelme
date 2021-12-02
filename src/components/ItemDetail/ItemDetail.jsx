@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import CounterDisplay from '../CounterDisplay/CounterDisplay'
 import './ItemDetail.css'
+//  import Swal from 'sweetalert2'
+ import { NavLink } from 'react-router-dom'
+
 
 const ItemDetail = ({ item }) => {
+  const [quantity, setQuantity] = useState(0)
+  const onAdd = (counter) => {
+    setQuantity(counter)
+  }
   return (
     <div className="col-12 col-lg-8 col-xl-10 mx-auto">
     <div className="card  mb-3 mt-4" key={item.id}>
@@ -17,7 +24,10 @@ const ItemDetail = ({ item }) => {
             <h6 className=" mb-2 text-muted ">Talla: <span className="size">{item.size}</span></h6>
             <h6 className="card-subtitle mb-2">Precio: <span className="font-weight-bold size">{item.price}</span></h6>
             <hr></hr>
-            <CounterDisplay initial={1} stock={item.stock} />
+            {
+              quantity >= 1 ? <NavLink className="btn btn-success rounded-fill" to="/cart">Ir al Carrito</NavLink> : <CounterDisplay stock={item.stock} onAdd={onAdd} quantity={quantity} setQuantity={setQuantity} initial={1}/>
+            }
+            
             <h6 className="mt-3">Stock disponible: {item.stock}</h6>
           </div>
         </div>
