@@ -11,11 +11,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import CartContextProvider from './Context/CartContext'
 
 
 
 function App() {
   return (
+    <CartContextProvider>
     <Router>
       <NavBar />
     <Switch>
@@ -35,6 +37,7 @@ function App() {
       </Route>
     </Switch>
     </Router>
+    </CartContextProvider>
   );
 }
 

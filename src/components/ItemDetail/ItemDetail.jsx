@@ -1,14 +1,23 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import CounterDisplay from '../CounterDisplay/CounterDisplay'
 import './ItemDetail.css'
 //  import Swal from 'sweetalert2'
- import { NavLink } from 'react-router-dom'
-
-
+ import { useHistory } from 'react-router-dom'
+ import { CartContext } from '../../Context/CartContext.js'
 const ItemDetail = ({ item }) => {
   const [quantity, setQuantity] = useState(0)
-  const onAdd = (counter) => {
-    setQuantity(counter)
+  const [comprar, setComprar] = useState(false)
+  const history = useHistory()
+  const {addItem, agregarCantidad} = useContext(CartContext)
+  
+  const onAdd = (qty) => {
+    setQuantity(qty)
+    setComprar(true)
+  }
+  const handlePurchase = () => {
+    addItem(item, quantity)
+    agregarCantidad(quantity)
+    history.push(`/cart`)
   }
   return (
     <div className="col-12 col-lg-8 col-xl-10 mx-auto">
@@ -25,7 +34,7 @@ const ItemDetail = ({ item }) => {
             <h6 className="card-subtitle mb-2">Precio: <span className="font-weight-bold size">{item.price}</span></h6>
             <hr></hr>
             {
-              quantity >= 1 ? <NavLink className="btn btn-success rounded-fill" to="/cart">Ir al Carrito</NavLink> : <CounterDisplay stock={item.stock} onAdd={onAdd} quantity={quantity} setQuantity={setQuantity} initial={1}/>
+              comprar ? <button className="btn btn-success rounded-fill" onClick={handlePurchase}>Ir al Carrito</button> : <CounterDisplay stock={item.stock} onAdd={(qty) => onAdd(qty)} quantity={quantity}  initial={1}/>
             }
             
             <h6 className="mt-3">Stock disponible: {item.stock}</h6>
@@ -35,8 +44,6 @@ const ItemDetail = ({ item }) => {
     </div>
 
     </div>
-
-
   )
 }
 
