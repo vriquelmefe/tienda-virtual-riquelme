@@ -8,13 +8,13 @@ const CardWidget = () => {
     const {totalProductosCarrito, cart} = useContext(CartContext)
 
     return (
-        <NavLink to="/cart"  
+        <NavLink  className="icon-cart" to="/cart"  
             style={{
                 visibility: cart.length === 0 ? 'hidden' : 'visible'
             }}
         >
-            <FaCartArrowDown className="cartWidget"/>
-            <span>{totalProductosCarrito()}</span>
+            <FaCartArrowDown className="cartWidget" size="30px"/>
+            <span className="cantidad">{totalProductosCarrito()}</span>
         </NavLink>
     )
 }

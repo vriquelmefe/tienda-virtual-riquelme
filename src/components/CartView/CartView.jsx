@@ -1,11 +1,11 @@
 import React, { useContext }  from 'react'
-// import './carditem.css'
+import './CartView.css'
 import { CartContext } from '../../Context/CartContext'
 import Cart from '../Cart/Cart'
 import { NavLink } from 'react-router-dom'
 
 const CardView = () => {
-    const {vaciarCarrito, cart} = useContext(CartContext)
+    const {vaciarCarrito, cart, totalCompra} = useContext(CartContext)
 
     if (cart.length === 0) {
         return <div className="container my-5">
@@ -25,11 +25,15 @@ const CardView = () => {
                         cart.map(item => <Cart key={item.id} {...item}/>)
                     }
                 </div>
+                <div className="container">
+
+                <p>Valor total de compra: $ <span className="font-weight-bold h3">{totalCompra()}</span></p>
+                </div>
                  <hr/>
-            <div className="container">
-                <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
-                <button className="btn btn-success mx-2">Terminar mi compra</button>
-            </div>
+                <div className="container">
+                    <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
+                    <button className="btn btn-pink mx-2">Terminar mi compra</button>
+                </div>
             </div>
     )
 }

@@ -1,0 +1,10 @@
+.btn-pink{
+    background-color: pink;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-danger{
+    border-radius: 20px;
+}

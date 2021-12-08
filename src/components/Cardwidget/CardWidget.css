@@ -1,5 +1,14 @@
 .icon-cart{
     cursor: pointer;
     vertical-align: middle;
-    color: rgb(241, 107, 129);
+    color: rgb(175, 36, 180);
+}
+a.icon-cart:hover{
+    cursor: pointer;
+    vertical-align: middle;
+    color: rgb(175, 36, 180);
+    background: none;
+}
+.cantidad{
+    color: rgb(175, 36, 180);
 }
