@@ -1,16 +1,13 @@
 import React from 'react'
 import './navbar.css'
-import CardWidget from '../../components/Cardwidget/CardWidget.jsx'
+import CardWidget from '../../components/CardWidget/CardWidget.jsx'
 import Logo from '../../assets/img/logo.png'
 // import Swal from 'sweetalert2'
 import { NavLink } from 'react-router-dom';
-import { CartContext } from "../../Context/CartContext";
-import { useContext } from "react";
 
 
 const NavBar = () => {
   
-  const {cart} = useContext(CartContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-pink">
       <NavLink className="navbar-brand" to="/"><img src={Logo} width="50px" alt="logo" className="imagen-logo"></img></NavLink>
@@ -40,13 +37,7 @@ const NavBar = () => {
           <li className="nav-item mr-2">
             <NavLink className="nav-link bg-rounded-login px-3" to="/login">Login</NavLink>
           </li>
-          <NavLink to="/cart">
           <CardWidget/>
-          <span style={{
-            color: 'black'
-          }}>{cart.length}</span>
-
-          </NavLink>
         </ul>
 
       </div>

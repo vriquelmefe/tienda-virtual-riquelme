@@ -4,7 +4,7 @@ import ItemListContainer from './container/ItemListContainer/ItemListContainer.j
 import ItemDetailContainer from './container/ItemDetailContainer/ItemDetailContainer';
 import Contacto from './components/Contacto/Contacto'
 import Login from './components/Login/Login'
-import CartWidget from './components/Cardwidget/CardWidget'
+import CardView from './components/CartView/CartView'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 import {
   BrowserRouter as Router,
@@ -31,7 +31,7 @@ function App() {
       <Route exact path="/item/:prodId" component={ItemDetailContainer}/>
       <Route path="/contacto" component={Contacto} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/cart" component={CartWidget} />
+      <Route exact path="/cart" component={CardView} />
       <Route path="*">
         <PageNotFound />
       </Route>

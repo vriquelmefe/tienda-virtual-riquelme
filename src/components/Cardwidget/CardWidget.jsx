@@ -1,16 +1,23 @@
-import React from 'react'
-import './carditem.css'
+import React, {useContext} from 'react'
+import './CardWidget.css'
 import { FaCartArrowDown } from 'react-icons/fa';
-// import Cart from '../Cart/Cart'
+import { NavLink } from 'react-router-dom'
+import { CartContext } from '../../Context/CartContext'
 
-const CardItem = ({callShow}) => {
-    // const [productos, setProductos] = useState([])
-    
+const CardWidget = () => {
+    const {totalProductosCarrito, cart} = useContext(CartContext)
+
     return (
-        <div className="icon-cart mt-1">
-            <FaCartArrowDown  size="30px" onClick={callShow}/>
-        </div>
+        <NavLink to="/cart"  
+            style={{
+                visibility: cart.length === 0 ? 'hidden' : 'visible'
+            }}
+        >
+            <FaCartArrowDown className="cartWidget"/>
+            <span>{totalProductosCarrito()}</span>
+        </NavLink>
     )
 }
 
-export default CardItem
+export default CardWidget
+
