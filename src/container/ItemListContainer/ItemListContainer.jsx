@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import ItemList from '../../components/ItemList/ItemList.jsx'
 import Loading from '../../components/Loading/Loading'
 import './ItemListContainer.css'
-import { pedirDatos } from '../../services/pedirDatos'
 import { useParams } from 'react-router'
+import { collection, getDocs, query, where } from 'firebase/firestore/lite'
+import { db } from '../../firebase/config'
 
 const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([])
@@ -13,16 +14,21 @@ const ItemListContainer = ({ greeting }) => {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     setLoading(true)
-    pedirDatos(catId)
-    .then(productosResponse =>{
-      if(!catId){
-        setProductos(productosResponse)
-      }else{
-        setProductos(productosResponse.filter(producto => producto.category === catId))
-      }
+    const productosRef = collection(db, "productos")
+    const q = catId ? query(productosRef, where('category', '==', catId)) : productosRef
+    getDocs(q)
+    .then((snapshot) => {
+        const items = snapshot.docs.map((doc) => ({
+                id: doc.id, 
+                ...doc.data()
+            })
+        )
+        setProductos(items)
     })
-    .catch(err => console.log(err))
-    .finally(() => setLoading(false))
+    .finally(() => {
+        setLoading(false)
+    })
+
   }, [catId])
 
   // if (loading) {

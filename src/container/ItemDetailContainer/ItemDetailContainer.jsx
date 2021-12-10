@@ -3,6 +3,8 @@ import {  useParams } from 'react-router-dom'
 import { pedirDatos } from '../../services/pedirDatos';
 import Loading from '../../components/Loading/Loading'
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import { db } from '../../firebase/config'
+import { doc, getDoc } from 'firebase/firestore/lite'
 // import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
@@ -12,14 +14,18 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    pedirDatos(prodId)
-      .then(data => data.find(item => item.id === prodId))
-      .then(resp => setItem(resp))
-      .catch(err => err)
-      .finally(() => {
+    const docRef = doc(db, "productos", prodId)
+    getDoc(docRef)
+    .then((doc) => {
+        setItem( {
+            id: doc.id,
+            ...doc.data()
+        } )
+    })
+    .finally(() => {
         setLoading(false)
-      })
-  }, [prodId])
+    })
+}, [])
 
   // if (loading) {
   //   return <Loading />;
