@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useContext } from 'react/cjs/react.development';
 import { UserContext } from '../../Context/UserContext';
-import imagenLogin from '../../assets/img/login2.gif'
+import imagenLogin from '../../assets/img/login2.gif';
+import './Login.css'
 
 const Login = () => {
   const {login} = useContext(UserContext);
@@ -14,7 +15,7 @@ const Login = () => {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <img src={imagenLogin} alt="login" height="150px" id="exampleModalLabel" className="modal-title mx-auto" />
+              <img src={imagenLogin} alt="login" height="150px" id="exampleModalLabel" className="modal-title imagenModalLogin" />
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

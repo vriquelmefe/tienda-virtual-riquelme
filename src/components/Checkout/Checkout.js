@@ -46,7 +46,9 @@ const Checkout = () => {
             date: Timestamp.fromDate(new Date())
 
         }
+        //impresion del pedido por consola
         console.log('buyer', order.buyer)
+
         console.log(order)
         
         const batch = writeBatch(db)

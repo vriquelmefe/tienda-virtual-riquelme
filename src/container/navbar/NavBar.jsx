@@ -30,15 +30,13 @@ const NavBar = () => {
               <NavLink className="dropdown-item" to="/category/ropa">Ropa</NavLink>
               <NavLink className="dropdown-item" to='/category/manualidades'>Manualidades</NavLink>
               <NavLink className="dropdown-item" to='/category/accesorios'>Accesorios</NavLink>
-
-
             </ul>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/contacto">Contacto</NavLink>
           </li>
           <CardWidget/>
-        </ul>
+       
           {
             logged ?
             <>
@@ -56,7 +54,7 @@ const NavBar = () => {
             </>
 
           }
-
+   </ul>
       </div>
     </nav>
   )
