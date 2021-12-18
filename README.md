@@ -9,7 +9,7 @@
     <img src="https://raw.githubusercontent.com/vriquelmefe/virtual-store-riquelme/main/src/assets/img/home-virtual-store.png" />
 <br>
 <br>
-    <img src="https://raw.githubusercontent.com/vriquelmefe/virtual-store-riquelme/main/src/assets/img/grabacion-uso-app.gif" />
+    <img src="https://raw.githubusercontent.com/vriquelmefe/virtual-store-riquelme/main/src/assets/img/gif-final.gif" />
 <br>
 
 # Proyecto creado con Create React App
