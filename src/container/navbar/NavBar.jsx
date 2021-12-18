@@ -37,8 +37,8 @@ const NavBar = () => {
           <li className="nav-item">
             <NavLink className="nav-link" to="/contacto">Contacto</NavLink>
           </li>
-        </ul>
           <CardWidget/>
+        </ul>
           {
             logged ?
             <>
