@@ -12,32 +12,41 @@ import {
   Route
 } from "react-router-dom";
 import CartContextProvider from './Context/CartContext'
+import { UserContextProvider } from './Context/UserContext';
+import Checkout from './components/Checkout/Checkout.js';
+import PageAdmin from './components/PageAdmin/PageAdmin';
+import SignUp from './components/SignUp/SignUp.jsx';
 
 
 
 function App() {
   return (
-    <CartContextProvider>
-    <Router>
-      <NavBar />
-    <Switch>
-      <Route exact path="/">
-      <ItemListContainer greeting="Conoce más de la moda en Salud!!!"/>
-      </Route>
-      <Route path="/category/:catId">
-      <ItemListContainer greeting="Todos los productos que puedas imaginar!!!"/>
+    <UserContextProvider>
+      <CartContextProvider>
+      <Router>
+        <NavBar />
+      <Switch>
+        <Route exact path="/">
+        <ItemListContainer greeting="Conoce más de la moda en Salud!!!"/>
+        </Route>
+        <Route path="/category/:catId">
+        <ItemListContainer greeting="Todos los productos que puedas imaginar!!!"/>
 
-      </Route>
-      <Route exact path="/item/:prodId" component={ItemDetailContainer}/>
-      <Route path="/contacto" component={Contacto} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/cart" component={CardView} />
-      <Route path="*">
-        <PageNotFound />
-      </Route>
-    </Switch>
-    </Router>
-    </CartContextProvider>
+        </Route>
+        <Route exact path="/item/:prodId" component={ItemDetailContainer}/>
+        <Route path="/contacto" component={Contacto} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/cart" component={CardView} />
+        <Route exact path="/checkout" component={Checkout} />
+        <Route exact path="/admin" component={PageAdmin} />
+        <Route path="*">
+          <PageNotFound />
+        </Route>
+      </Switch>
+      </Router>
+      </CartContextProvider>
+      </UserContextProvider>
   );
 }
 

@@ -6,7 +6,7 @@ const Cart = ({ name, price, imagen, cantidad, id }) => {
     const { removerDelCarrito } = useContext(CartContext)
 
     return (
-        <div className="container">
+        <div className="container text-center">
 
         <div className="card card-style mb-3" max-width="540px">
             <div className="row no-gutters">

@@ -31,9 +31,6 @@ const ItemListContainer = ({ greeting }) => {
 
   }, [catId])
 
-  // if (loading) {
-  //   return ;
-  // }
   return (
     <div className="container">
       <h2 className="titulo-greeting my-4 text-center">{greeting}</h2>

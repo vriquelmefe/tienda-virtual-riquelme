@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './navbar.css'
 import CardWidget from '../../components/CardWidget/CardWidget.jsx'
 import Logo from '../../assets/img/logo.png'
 // import Swal from 'sweetalert2'
 import { NavLink } from 'react-router-dom';
+import { UserContext } from '../../Context/UserContext'
 
 
 const NavBar = () => {
+
+  const {logged, logout, user} = useContext(UserContext)
   
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-pink">
@@ -34,11 +37,25 @@ const NavBar = () => {
           <li className="nav-item">
             <NavLink className="nav-link" to="/contacto">Contacto</NavLink>
           </li>
-          <li className="nav-item mr-2">
-            <NavLink className="nav-link bg-rounded-login px-3" to="/login">Login</NavLink>
-          </li>
-          <CardWidget/>
         </ul>
+          <CardWidget/>
+          {
+            logged ?
+            <>
+            <span style={{color: "gray"}} className='mt-2'>Bienvenido <em>{user.email}</em></span>
+            <NavLink className="nav-link bg-rounded-login px-3" to="/admin" >Admin</NavLink>
+            <button onClick={logout} className='btn btn-primary mx-3'>Salir</button>
+            </>
+            :
+            <>
+            <NavLink type="button" to="/signup" className="btn btn-success btn-rounded" data-toggle="modal" data-target="#exampleModal">
+              Signup
+            </NavLink>
+            <NavLink className="nav-link bg-rounded-login px-3" to="/login" data-toggle="modal" data-target="#exampleModal">Login</NavLink>
+
+            </>
+
+          }
 
       </div>
     </nav>

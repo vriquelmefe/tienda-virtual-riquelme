@@ -39,4 +39,11 @@ a.dropdown-item.active{
 .bg-rounded-login{
     background-color: white;
     border-radius: 20px;
+    color: rgb(209, 30, 60);
+}
+a.nav-link{
+    color: rgb(209, 30, 60);
+}
+.btn-success{
+    border-radius: 20px;
 }

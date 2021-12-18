@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {  useParams } from 'react-router-dom'
-import { pedirDatos } from '../../services/pedirDatos';
+// import { pedirDatos } from '../../services/pedirDatos';
 import Loading from '../../components/Loading/Loading'
 import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import { db } from '../../firebase/config'
@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
     .finally(() => {
         setLoading(false)
     })
-}, [])
+}, [prodId])
 
   // if (loading) {
   //   return <Loading />;

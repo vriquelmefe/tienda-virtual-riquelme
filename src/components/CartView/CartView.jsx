@@ -32,7 +32,7 @@ const CardView = () => {
                  <hr/>
                 <div className="container">
                     <button className="btn btn-danger" onClick={vaciarCarrito}>Vaciar carrito</button>
-                    <button className="btn btn-pink mx-2">Terminar mi compra</button>
+                    <NavLink  to="/checkout" className="btn btn-pink mx-2">Terminar mi compra</NavLink>
                 </div>
             </div>
     )

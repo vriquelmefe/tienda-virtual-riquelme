@@ -1,0 +1,5 @@
+.imagenFondo{
+    background-image: url(../../assets/img/fondo-admin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
