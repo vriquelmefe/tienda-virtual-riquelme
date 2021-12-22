@@ -11,8 +11,8 @@ const Checkout = () => {
     // const [setOrderId] = useState(null)
     const [loading, setLoading] = useState(false)
     const [values, setValues] = useState({
-        nombre: 'Vanessa',
-        email: 'code@code.cl',
+        nombre: '',
+        email: '',
         telefono: '',
     })
 
@@ -34,7 +34,7 @@ const Checkout = () => {
             alert("Email inválido")
             return
         }
-        if (values.tel.length < 7) {
+        if (values.telefono.length < 7) {
             alert("Teléfono inválido")
             return
         }
@@ -136,13 +136,13 @@ const Checkout = () => {
 
                             <input
                                 className="form-control my-2"
-                                type="tel"
+                                type="telefono"
                                 placeholder="Teléfono"
-                                name="tel"
+                                name="telefono"
                                 value={values.tel}
                                 onChange={handleInputChange}
                             />
-                             {values.email.length === 0 && <small>Este campo es obligatorio</small>}
+                             {values.telefono.length === 0 && <small>Este campo es obligatorio</small>}
                             <br/>
                             <button className="btn btn-success" type="submit" >Finalizar</button>
                         </form>
